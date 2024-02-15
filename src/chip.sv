@@ -8,9 +8,9 @@ module my_chip (
 );
     
     RangeFinder #(.WIDTH(10)) r0(.clock, .reset, 
-                   .go(io_in[0]), .finish(io_out[0]), 
+                   .go(io_in[0]), .finish(io_in[1]), 
                    .data_in(io_in[11:2]), 
                    .range(io_out[11:2]), 
-                   .debug_error(io_out[1]));
+                   .debug_error(io_out[0]));
 
 endmodule
